@@ -8,3 +8,7 @@ jobs:
       - name: Log commit to cloud watch
         id: hello
         uses: kamosemonyo/cloudwatch-logger@v1.0
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.GIT_CLOUDWATCH_A_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.GIT_CLOUDWATCH_SECRET }}
+          AWS_REGION: ${{ secrets.GIT_CLOUDWATCH_REGION }}
